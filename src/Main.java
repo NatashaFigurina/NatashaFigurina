@@ -1,14 +1,15 @@
+package src;
 
 public class Main {
     public static void main(String[] args) {
-        String newFio = "Иванов Петр Петрович";
-        String newPosition = "Директор";
+        String newFullName = "Иванов Петр Петрович";
+        String newPost = "Директор";
         String newEmail = "Ivanov@mail.ru";
         String newPhoneNumber = "538737378";
-        int newWage = 100000;
+        int newSalary = 100000;
         int newAge = 45;
 
-        Employee employee = new Employee(newFio, newPosition,  newEmail, newPhoneNumber, newWage, newAge);
+        Employee employee = new Employee(newFullName, newPost,  newEmail, newPhoneNumber, newSalary, newAge);
         employee.getInfo ();
 
         Employee [] personArray = new Employee [5];
@@ -23,8 +24,10 @@ public class Main {
         }
 
         Park attraction = new Park ();
-        Park.AttractionInfo attractionOne = attraction.new AttractionInfo();
-        attractionOne.getInfo();
+        Park.Attraction attraction1 = attraction.new Attraction("карусель", "с 9:00 до 15:00", 5);
+        Park.Attraction attraction2 = attraction.new Attraction("горки", "с 9:00 до 21:00", 10);
+        attraction1.getInfo();
+        attraction2.getInfo();
 
     }
 }
