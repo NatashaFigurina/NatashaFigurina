@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         AcceptStringArray stringArray = new AcceptStringArray();
         int summa;
-        String[][] array = AcceptStringArray.addArray();
+        String[][] array = stringArray.addArray();
         try {
             summa = stringArray.workArray(array);
         } catch (MyArraySizeException e) {

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class AcceptStringArray {
-    public static String[][] addArray() {
+    public String[][] addArray() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите количество строк массива: ");
         int line = sc.nextInt();
