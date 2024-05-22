@@ -1,24 +1,26 @@
-package src.task_2;
+package lesson_7.task_2;
 
-public class Circle implements Share, Fillable, Borderable {
-    private double radius;
+public class Rectangle implements Share, Fillable, Borderable {
+    private double width;
+    private double height;
     private String fillColor;
     private String borderColor;
 
-    public Circle(double radius) {
-        this.radius = radius;
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
     }
 
     @Override
 
     public double isPerimeter() {
-        return 2 * Math.PI * radius;
+        return 2 * (width + height);
     }
 
     @Override
 
     public double isArea() {
-        return Math.PI * radius * radius;
+        return width * height;
     }
 
     @Override
@@ -32,7 +34,7 @@ public class Circle implements Share, Fillable, Borderable {
     }
 
     public void printAll() {
-        System.out.println("Круг: " + " периметр = " + isPerimeter() + "\n" +
+        System.out.println("Прямоугольник: " + " периметр = " + isPerimeter() + "\n" +
                 "площадь = " + isArea() + "\n" +
                 "заливка: " + fillColor + " \n" + "контур: " + borderColor);
     }

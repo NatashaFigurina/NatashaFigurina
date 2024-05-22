@@ -1,4 +1,4 @@
-package src.task_1;
+package lesson_7.task_1;
 
 public class Cat extends Animal {
 

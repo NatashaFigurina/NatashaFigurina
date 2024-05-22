@@ -1,7 +1,12 @@
-package src;
+package lesson_7;
 
-import src.task_1.*;
-import src.task_2.*;
+import lesson_7.task_1.Animal;
+import lesson_7.task_1.Dog;
+import lesson_7.task_1.Cat;
+import lesson_7.task_1.Bowl;
+import lesson_7.task_2.Circle;
+import lesson_7.task_2.Rectangle;
+import lesson_7.task_2.Triangles;
 
 import java.util.Scanner;
 
@@ -9,12 +14,12 @@ public class Main {
 
     public static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) throws WrongVolumeFoodException {
+    public static void main(String[] args) throws task_1.WrongVolumeFoodException {
         task1();
         task2();
     }
 
-    public static void task1() throws WrongVolumeFoodException {
+    public static void task1() throws task_1.WrongVolumeFoodException {
         animalsCalculate();
         feedCats();
     }
@@ -39,7 +44,7 @@ public class Main {
         barbos.isRunDog(501);
     }
 
-    public static void feedCats() throws WrongVolumeFoodException {
+    public static void feedCats() throws task_1.WrongVolumeFoodException {
         Cat[] allCats = new Cat[4];
         System.out.println("\nСоздаем котов, которых будем кормить");
         allCats[0] = new Cat("кот", "Барсик", false, 5);
@@ -62,7 +67,7 @@ public class Main {
             try {
                 bowl = new Bowl(volume, food);
                 break;
-            } catch (WrongVolumeFoodException e) {
+            } catch (task_1.WrongVolumeFoodException e) {
                 System.out.println(e.getMessage());
             }
         }
