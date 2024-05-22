@@ -1,13 +1,13 @@
-package src.task_1;
+package lesson_7.task_1;
 
 public class Bowl {
     public int food;
     int volume;
 
-    public Bowl(int volume, int food) throws WrongVolumeFoodException {
+    public Bowl(int volume, int food) throws task_1.WrongVolumeFoodException {
 
         if (food > volume) {
-            throw new WrongVolumeFoodException("Невозможно создать миску! Объем корма не может превышать объема миски! Превышение составляет: " +
+            throw new task_1.WrongVolumeFoodException("Невозможно создать миску! Объем корма не может превышать объема миски! Превышение составляет: " +
                     (food - volume) + "грамм");
         } else {
             this.food = food;

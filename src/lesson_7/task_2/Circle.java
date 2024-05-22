@@ -1,30 +1,24 @@
-package src.task_2;
+package lesson_7.task_2;
 
-public class Triangles implements Share, Fillable, Borderable {
-    private double s1;
-    private double s2;
-    private double s3;
-    private double height;
+public class Circle implements Share, Fillable, Borderable {
+    private double radius;
     private String fillColor;
     private String borderColor;
 
-    public Triangles(double s1, double s2, double s3, double height) {
-        this.s1 = s1;
-        this.s2 = s2;
-        this.s3 = s3;
-        this.height = height;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
 
     public double isPerimeter() {
-        return s1 + s2 + s3;
+        return 2 * Math.PI * radius;
     }
 
     @Override
 
     public double isArea() {
-        return 0.5 * height * s1;
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -38,7 +32,7 @@ public class Triangles implements Share, Fillable, Borderable {
     }
 
     public void printAll() {
-        System.out.println("Tреугольник: " + " периметр = " + isPerimeter() + "\n" +
+        System.out.println("Круг: " + " периметр = " + isPerimeter() + "\n" +
                 "площадь = " + isArea() + "\n" +
                 "заливка: " + fillColor + " \n" + "контур: " + borderColor);
     }
