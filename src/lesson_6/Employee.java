@@ -1,4 +1,4 @@
-package src;
+package lesson_6;
 
 public class Employee {
     private String fullName;
