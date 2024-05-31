@@ -22,7 +22,7 @@ public class PhoneBook {
             System.out.println("Нет данных");
         }
         for (PersonData personData : personsData) {
-            personData.toPrint(personData);
+            personData.toPrint();
         }
     }
 

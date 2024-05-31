@@ -9,8 +9,8 @@ public class PersonData {
         this.phone = phone;
     }
 
-    public void toPrint(PersonData personData) {
-        System.out.printf("Фамилия: %s, номер телефона: %s\n", personData.name, personData.phone);
+    public void toPrint() {
+        System.out.printf("Фамилия: %s, номер телефона: %s\n", name, phone);
     }
 
     @Override
