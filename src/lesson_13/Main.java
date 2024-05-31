@@ -17,7 +17,7 @@ public class Main {
     public static void task1() {
         Words words = new Words();
         System.out.println("Введенные слова: " + words.wordsList);
-        words.fildingSingularWord();
+        words.searchSingularWord();
         words.isWordCount();
     }
 

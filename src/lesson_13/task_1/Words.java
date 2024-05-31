@@ -6,16 +6,16 @@ import java.util.List;
 
 
 public class Words {
-    public List<String> wordsList = List.of("car", "dog,", "pen", "flower", "cat", "dog", "bird", "go", "go", "phone", "name",
+    public List<String> wordsList = List.of("car", "dog", "pen", "flower", "cat", "dog", "bird", "go", "go", "phone", "name",
             "car", "age");
     HashSet<String> singularWord = new HashSet<>();
     HashMap<String, Integer> wordCount = new HashMap<>();
 
-    public void fildingSingularWord() {
+    public void searchSingularWord() {
         for (String word : wordsList) {
             singularWord.add(word);
         }
-        System.out.println("Уникальные слова:" + " " + singularWord);
+        System.out.printf("Уникальные слова: %s", singularWord);
     }
 
     public void isWordCount() {
@@ -28,7 +28,7 @@ public class Words {
         }
         System.out.println("Количество употреблений слова :");
         for (String word1 : wordCount.keySet()) {
-            System.out.println(word1 + " " + wordCount.get(word1) + " " + "шт");
+            System.out.printf("%s: %s шт\n", word1, wordCount.get(word1));
         }
     }
 }
